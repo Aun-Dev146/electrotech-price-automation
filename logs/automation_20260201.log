@@ -1,0 +1,74 @@
+2026-02-01 00:07:39,147 - ElectroTech - INFO - Setting up sample data...
+2026-02-01 00:07:39,218 - ElectroTech - INFO - Database initialized successfully
+2026-02-01 00:07:39,226 - ElectroTech - INFO - Sample vendor data setup complete
+2026-02-01 00:07:39,229 - ElectroTech - INFO - Setup complete!
+2026-02-01 00:12:01,416 - ElectroTech - INFO - Running test...
+2026-02-01 00:12:01,435 - ElectroTech - INFO - Database initialized successfully
+2026-02-01 00:12:01,435 - ElectroTech - INFO - Automation Engine initialized
+2026-02-01 00:12:01,437 - ElectroTech - INFO - ============================================================
+2026-02-01 00:12:01,437 - ElectroTech - INFO - STARTING DAILY AUTOMATION
+2026-02-01 00:12:01,437 - ElectroTech - INFO - ============================================================
+2026-02-01 00:12:01,437 - ElectroTech - INFO - Processing WhatsApp messages...
+2026-02-01 00:12:01,473 - ElectroTech - INFO - Inserted price: Inverter Growatt - Rs 65000.0 from VND001
+2026-02-01 00:12:01,489 - ElectroTech - INFO - Inserted price: Inverter Growatt - Rs 65000.0 from VND001
+2026-02-01 00:12:01,497 - ElectroTech - INFO - Processed 2 price entries
+2026-02-01 00:12:01,640 - ElectroTech - INFO - Generating daily report...
+2026-02-01 00:12:01,653 - ElectroTech - INFO - Reports saved: C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\output\daily_summary_20260201.txt, C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\output\detailed_report_20260201.txt
+2026-02-01 00:12:01,655 - ElectroTech - INFO - Daily report generated: 1 products
+2026-02-01 00:12:01,677 - ElectroTech - INFO - ============================================================
+2026-02-01 00:12:01,680 - ElectroTech - INFO - AUTOMATION COMPLETED SUCCESSFULLY
+2026-02-01 00:12:01,680 - ElectroTech - INFO - ============================================================
+2026-02-01 00:12:30,313 - DailyOrchestrator - INFO - ================================================================================
+2026-02-01 00:12:30,317 - DailyOrchestrator - INFO - ELECTRO TECH DAILY AUTOMATION STARTED
+2026-02-01 00:12:30,317 - DailyOrchestrator - INFO - ================================================================================
+2026-02-01 00:12:30,320 - ElectroTech - INFO - Database initialized successfully
+2026-02-01 00:12:30,320 - DailyOrchestrator - INFO - 
+================================================================================
+2026-02-01 00:12:30,320 - DailyOrchestrator - INFO - STEP 1: COLLECTING VENDOR MESSAGES
+2026-02-01 00:12:30,320 - DailyOrchestrator - INFO - ================================================================================
+2026-02-01 00:12:30,323 - DailyOrchestrator - INFO - Loaded 5 active vendors
+2026-02-01 00:12:32,955 - WhatsAppAuto - INFO - Chrome driver initialized
+2026-02-01 00:12:32,957 - WhatsAppAuto - INFO - ================================================================================
+2026-02-01 00:12:32,957 - WhatsAppAuto - INFO - MESSAGE COLLECTOR INITIALIZED
+2026-02-01 00:12:32,957 - WhatsAppAuto - INFO - Monitoring 5 specific vendors ONLY:
+2026-02-01 00:12:32,961 - WhatsAppAuto - INFO -   1. +923001234567
+2026-02-01 00:12:32,961 - WhatsAppAuto - INFO -   2. +923219876543
+2026-02-01 00:12:32,965 - WhatsAppAuto - INFO -   3. +923335555555
+2026-02-01 00:12:32,965 - WhatsAppAuto - INFO -   4. +923457777777
+2026-02-01 00:12:32,966 - WhatsAppAuto - INFO -   5. +923123333333
+2026-02-01 00:12:32,966 - WhatsAppAuto - INFO - ================================================================================
+2026-02-01 00:12:32,973 - WhatsAppAuto - INFO - ================================================================================
+2026-02-01 00:12:32,973 - WhatsAppAuto - INFO - STARTING MESSAGE COLLECTION FROM SPECIFIC VENDORS
+2026-02-01 00:12:32,973 - WhatsAppAuto - INFO - Will only monitor: ['+923001234567', '+923219876543', '+923335555555', '+923457777777', '+923123333333']
+2026-02-01 00:12:32,979 - WhatsAppAuto - INFO - ================================================================================
+2026-02-01 00:12:32,979 - WhatsAppAuto - INFO - Opening WhatsApp Web...
+2026-02-01 00:13:09,203 - DailyOrchestrator - WARNING - Message collection had issues, continuing...
+2026-02-01 00:13:09,203 - DailyOrchestrator - INFO - 
+================================================================================
+2026-02-01 00:13:09,204 - DailyOrchestrator - INFO - STEP 2: PROCESSING PRICE DATA
+2026-02-01 00:13:09,204 - DailyOrchestrator - INFO - ================================================================================
+2026-02-01 00:13:09,206 - ElectroTech - INFO - Database initialized successfully
+2026-02-01 00:13:09,206 - ElectroTech - INFO - Automation Engine initialized
+2026-02-01 00:13:09,206 - ElectroTech - INFO - Processing WhatsApp messages...
+2026-02-01 00:13:09,211 - ElectroTech - WARNING - Vendor not found for: 0012
+2026-02-01 00:13:09,211 - ElectroTech - INFO - Processed 0 price entries
+2026-02-01 00:13:09,216 - DailyOrchestrator - INFO - 
+================================================================================
+2026-02-01 00:13:09,216 - DailyOrchestrator - INFO - STEP 3: GENERATING REPORTS
+2026-02-01 00:13:09,216 - DailyOrchestrator - INFO - ================================================================================
+2026-02-01 00:13:09,219 - ElectroTech - INFO - Database initialized successfully
+2026-02-01 00:13:09,220 - ElectroTech - INFO - Automation Engine initialized
+2026-02-01 00:13:09,220 - ElectroTech - INFO - Generating daily report...
+2026-02-01 00:13:09,223 - ElectroTech - INFO - Reports saved: C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\output\daily_summary_20260201.txt, C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\output\detailed_report_20260201.txt
+2026-02-01 00:13:09,225 - ElectroTech - INFO - Daily report generated: 1 products
+2026-02-01 00:13:09,231 - DailyOrchestrator - INFO -   - Summary: C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\output\daily_summary_20260201.txt
+2026-02-01 00:13:09,231 - DailyOrchestrator - INFO -   - Detailed: C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\output\detailed_report_20260201.txt
+2026-02-01 00:13:09,233 - DailyOrchestrator - INFO - 
+================================================================================
+2026-02-01 00:13:09,233 - DailyOrchestrator - INFO - STEP 4: SENDING REPORT TO CEO
+2026-02-01 00:13:09,234 - DailyOrchestrator - INFO - ================================================================================
+2026-02-01 00:13:13,064 - DailyOrchestrator - WARNING - Report sending had issues
+2026-02-01 00:13:13,064 - DailyOrchestrator - INFO - 
+================================================================================
+2026-02-01 00:13:13,080 - DailyOrchestrator - INFO - Duration: 42.8 seconds
+2026-02-01 00:13:13,082 - DailyOrchestrator - INFO - ================================================================================
