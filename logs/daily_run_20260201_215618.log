@@ -1,0 +1,1139 @@
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [setup_logging:96] - ====================================================================================================
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [setup_logging:97] - ELECTRO TECH - DAILY PRICE INTELLIGENCE AUTOMATION
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [setup_logging:98] - Execution started at 2026-02-01T21:56:18.845713
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [setup_logging:99] - ====================================================================================================
+2026-02-01 21:56:18 - ProductionUtils - INFO - [log_access:391] - AUDIT: SYSTEM - EXECUTION_START - DailyOrchestrator - INITIATED
+2026-02-01 21:56:18 - ElectroTech - INFO - [_initialize_db:146] - Database initialized successfully
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [get_vendor_numbers:132] - Loading active vendors from database...
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [get_vendor_numbers:143] - [OK] Loaded 5 active vendors
+2026-02-01 21:56:18 - ProductionOrchestrator - DEBUG - [get_vendor_numbers:151] -   - ABC Solar Traders (VND001): +923001234567
+2026-02-01 21:56:18 - ProductionOrchestrator - DEBUG - [get_vendor_numbers:151] -   - XYZ Energy Hub (VND002): +923219876543
+2026-02-01 21:56:18 - ProductionOrchestrator - DEBUG - [get_vendor_numbers:151] -   - Solar Solutions (VND003): +923335555555
+2026-02-01 21:56:18 - ProductionOrchestrator - DEBUG - [get_vendor_numbers:151] -   - Green Power Tech (VND004): +923457777777
+2026-02-01 21:56:18 - ProductionOrchestrator - DEBUG - [get_vendor_numbers:151] -   - Power Systems Pak (VND005): +923123333333
+2026-02-01 21:56:18 - ProductionUtils - DEBUG - [wrapper:60] - Attempt 1/3 for step1_collect_messages
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [step1_collect_messages:172] - 
+====================================================================================================
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [step1_collect_messages:173] - STEP 1: COLLECTING VENDOR MESSAGES FROM WHATSAPP
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [step1_collect_messages:174] - ====================================================================================================
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [step1_collect_messages:180] - Monitoring 5 specific vendors ONLY:
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   1. ABC Solar Traders (+923001234567)
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   2. XYZ Energy Hub (+923219876543)
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   3. Solar Solutions (+923335555555)
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   4. Green Power Tech (+923457777777)
+2026-02-01 21:56:18 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   5. Power Systems Pak (+923123333333)
+2026-02-01 21:56:18 - selenium.webdriver.common.selenium_manager - DEBUG - [_get_binary:112] - Selenium Manager binary found at: C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2026-02-01 21:56:18 - selenium.webdriver.common.selenium_manager - DEBUG - [_run:127] - Executing process: C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2026-02-01 21:56:23 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Sending stats to Plausible: Props { browser: "chrome", browser_version: "", os: "windows", arch: "x86_64", lang: "python", selenium_version: "4.40" }
+2026-02-01 21:56:23 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chromedriver not found in PATH
+2026-02-01 21:56:23 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chrome detected at C:\Users\pc\AppData\Local\Google\Chrome\Application\chrome.exe
+2026-02-01 21:56:23 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Detected browser: chrome 144.0.7559.110
+2026-02-01 21:56:23 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+2026-02-01 21:56:23 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Required driver: chromedriver 144.0.7559.109
+2026-02-01 21:56:23 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chromedriver 144.0.7559.109 already in the cache
+2026-02-01 21:56:23 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Driver path: C:\Users\pc\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe
+2026-02-01 21:56:23 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Browser path: C:\Users\pc\AppData\Local\Google\Chrome\Application\chrome.exe
+2026-02-01 21:56:23 - selenium.webdriver.common.service - DEBUG - [_start_process:232] - Started executable: `C:\Users\pc\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe` in a child process with pid: 3396 using 0 to output -3
+2026-02-01 21:56:23 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'excludeSwitches': ['enable-automation'], 'useAutomationExtension': False, 'extensions': [], 'binary': 'C:\\Users\\pc\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--user-data-dir=C:\\Users\\pc\\Desktop\\Electro_tech_Whatsapp_Automation\\chrome_profile', '--profile-directory=Default', '--disable-blink-features=AutomationControlled', '--disable-dev-shm-usage', '--no-sandbox']}}}}
+2026-02-01 21:56:23 - urllib3.connectionpool - DEBUG - [_new_conn:241] - Starting new HTTP connection (1): localhost:56463
+2026-02-01 21:56:26 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session HTTP/1.1" 200 0
+2026-02-01 21:56:26 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"144.0.7559.110","chrome":{"chromedriverVersion":"144.0.7559.109 (6a8d5e49388fcc8a7d56d2a275e4ef424eb10960-refs/branch-heads/7559@{#4008})","userDataDir":"C:\\Users\\pc\\Desktop\\Electro_tech_Whatsapp_Automation\\chrome_profile"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:56470"},"goog:processID":16248,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"21f249fe92e412578e37471e89ca81e1"}} | headers=HTTPHeaderDict({'Content-Length': '913', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:26 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:26 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/window/maximize {}
+2026-02-01 21:56:26 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/window/maximize HTTP/1.1" 200 0
+2026-02-01 21:56:26 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=200 | data={"value":{"height":688,"width":1296,"x":-7,"y":-7}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:26 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [_setup_driver:92] - Chrome driver initialized
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [__init__:337] - ================================================================================
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [__init__:338] - MESSAGE COLLECTOR INITIALIZED
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [__init__:339] - Monitoring 5 specific vendors ONLY:
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [__init__:341] -   1. +923001234567
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [__init__:341] -   2. +923219876543
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [__init__:341] -   3. +923335555555
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [__init__:341] -   4. +923457777777
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [__init__:341] -   5. +923123333333
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [__init__:342] - ================================================================================
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [collect_daily_messages:359] - ================================================================================
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [collect_daily_messages:360] - STARTING MESSAGE COLLECTION FROM SPECIFIC VENDORS
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [collect_daily_messages:361] - Will only monitor: ['+923001234567', '+923219876543', '+923335555555', '+923457777777', '+923123333333']
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [collect_daily_messages:362] - ================================================================================
+2026-02-01 21:56:26 - WhatsAppAuto - INFO - [open_whatsapp:104] - Opening WhatsApp Web...
+2026-02-01 21:56:26 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/url {'url': 'https://web.whatsapp.com'}
+2026-02-01 21:56:31 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/url HTTP/1.1" 200 0
+2026-02-01 21:56:31 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:31 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:31 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:31 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:31 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:31 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:32 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:32 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:32 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:32 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:33 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:33 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:33 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:33 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:33 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:33 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:33 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:33 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:34 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:34 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:34 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:34 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:34 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:35 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:35 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:35 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:35 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:36 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:36 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:36 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:36 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:36 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:36 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:36 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:37 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:40 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:40 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:40 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:40 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:44 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:44 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:44 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:45 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:47 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:47 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:47 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:47 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:47 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:47 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:47 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:48 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:48 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:48 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:48 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:49 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:49 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:49 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:49 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:49 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:49 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:49 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:49 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:50 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:50 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:50 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:50 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:50 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:51 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:51 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:51 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:51 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:51 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:51 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:51 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:52 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:52 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:52 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:52 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:52 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:53 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:53 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:53 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:53 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:53 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:53 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:53 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:54 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:54 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:54 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:54 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:54 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:55 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:55 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:55 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:55 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:55 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:55 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:55 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:56 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:56 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:56 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:56 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:56 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:57 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:57 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:57 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:57 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:57 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:57 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:57 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:58 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:58 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:58 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:58 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:58 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:58 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:58 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:58 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:56:59 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:56:59 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:56:59 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:56:59 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:57:00 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:57:00 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:57:00 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:57:00 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:57:01 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:57:01 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:57:01 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:57:01 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:57:01 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:57:01 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:57:01 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:57:01 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:57:02 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': "div[data-testid='chat-list']"}
+2026-02-01 21:57:02 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:57:02 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-testid='chat-list']\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '621', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:57:02 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:57:02 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:56463/session/21f249fe92e412578e37471e89ca81e1/element {'using': 'css selector', 'value': 'canvas'}
+2026-02-01 21:57:02 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:56463 "POST /session/21f249fe92e412578e37471e89ca81e1/element HTTP/1.1" 404 0
+2026-02-01 21:57:02 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"canvas\"}\n  (Session info: chrome=144.0.7559.110)","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff74569c48e\n\t0x7ff74569c79c\n\t0x7ff7456ed3a7\n\t0x7ff7456e9ef5\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '599', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:57:02 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:57:02 - ProductionOrchestrator - ERROR - [step1_collect_messages:198] - [FAILED] Message collection failed: Message: no such element: Unable to locate element: {"method":"css selector","selector":"canvas"}
+  (Session info: chrome=144.0.7559.110); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff74569c48e
+	0x7ff74569c79c
+	0x7ff7456ed3a7
+	0x7ff7456e9ef5
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+Traceback (most recent call last):
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 110, in open_whatsapp
+    WebDriverWait(self.driver, 30).until(
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\support\wait.py", line 121, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff74569c48e
+	0x7ff74569c79c
+	0x7ff7456ed3a7
+	0x7ff7456e9ef5
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\run_all.py", line 185, in step1_collect_messages
+    message_count = collector.collect_daily_messages()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 365, in collect_daily_messages
+    if not self.wa.open_whatsapp():
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 119, in open_whatsapp
+    qr_code = self.driver.find_element(By.CSS_SELECTOR, "canvas")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 802, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"canvas"}
+  (Session info: chrome=144.0.7559.110); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff74569c48e
+	0x7ff74569c79c
+	0x7ff7456ed3a7
+	0x7ff7456e9ef5
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:02 - ProductionUtils - INFO - [log_access:391] - AUDIT: SYSTEM - MESSAGE_COLLECTION - WhatsApp - FAILED
+2026-02-01 21:57:02 - ProductionUtils - WARNING - [wrapper:75] - step1_collect_messages failed (attempt 1/3): Message: no such element: Unable to locate element: {"method":"css selector","selector":"canvas"}
+  (Session info: chrome=144.0.7559.110); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff74569c48e
+	0x7ff74569c79c
+	0x7ff7456ed3a7
+	0x7ff7456e9ef5
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+. Retrying in 4.1s...
+2026-02-01 21:57:06 - ProductionUtils - DEBUG - [wrapper:60] - Attempt 2/3 for step1_collect_messages
+2026-02-01 21:57:06 - ProductionOrchestrator - INFO - [step1_collect_messages:172] - 
+====================================================================================================
+2026-02-01 21:57:06 - ProductionOrchestrator - INFO - [step1_collect_messages:173] - STEP 1: COLLECTING VENDOR MESSAGES FROM WHATSAPP
+2026-02-01 21:57:06 - ProductionOrchestrator - INFO - [step1_collect_messages:174] - ====================================================================================================
+2026-02-01 21:57:06 - ProductionOrchestrator - INFO - [step1_collect_messages:180] - Monitoring 5 specific vendors ONLY:
+2026-02-01 21:57:06 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   1. ABC Solar Traders (+923001234567)
+2026-02-01 21:57:06 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   2. XYZ Energy Hub (+923219876543)
+2026-02-01 21:57:06 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   3. Solar Solutions (+923335555555)
+2026-02-01 21:57:06 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   4. Green Power Tech (+923457777777)
+2026-02-01 21:57:06 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   5. Power Systems Pak (+923123333333)
+2026-02-01 21:57:06 - selenium.webdriver.common.selenium_manager - DEBUG - [_get_binary:112] - Selenium Manager binary found at: C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2026-02-01 21:57:06 - selenium.webdriver.common.selenium_manager - DEBUG - [_run:127] - Executing process: C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2026-02-01 21:57:07 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chromedriver not found in PATH
+2026-02-01 21:57:07 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chrome detected at C:\Users\pc\AppData\Local\Google\Chrome\Application\chrome.exe
+2026-02-01 21:57:07 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Detected browser: chrome 144.0.7559.110
+2026-02-01 21:57:07 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Required driver: chromedriver 144.0.7559.109
+2026-02-01 21:57:07 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chromedriver 144.0.7559.109 already in the cache
+2026-02-01 21:57:07 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Driver path: C:\Users\pc\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe
+2026-02-01 21:57:07 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Browser path: C:\Users\pc\AppData\Local\Google\Chrome\Application\chrome.exe
+2026-02-01 21:57:07 - selenium.webdriver.common.service - DEBUG - [_start_process:232] - Started executable: `C:\Users\pc\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe` in a child process with pid: 14676 using 0 to output -3
+2026-02-01 21:57:07 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:59141/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'excludeSwitches': ['enable-automation'], 'useAutomationExtension': False, 'extensions': [], 'binary': 'C:\\Users\\pc\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--user-data-dir=C:\\Users\\pc\\Desktop\\Electro_tech_Whatsapp_Automation\\chrome_profile', '--profile-directory=Default', '--disable-blink-features=AutomationControlled', '--disable-dev-shm-usage', '--no-sandbox']}}}}
+2026-02-01 21:57:07 - urllib3.connectionpool - DEBUG - [_new_conn:241] - Starting new HTTP connection (1): localhost:59141
+2026-02-01 21:57:07 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:59141 "POST /session HTTP/1.1" 500 0
+2026-02-01 21:57:07 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=500 | data={"value":{"error":"session not created","message":"session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff745681be4\n\t0x7ff74567d119\n\t0x7ff7456d4221\n\t0x7ff7456d3a86\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '567', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:57:07 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:57:10 - ProductionOrchestrator - ERROR - [step1_collect_messages:198] - [FAILED] Message collection failed: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+Traceback (most recent call last):
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\run_all.py", line 184, in step1_collect_messages
+    collector = MessageCollector(vendor_numbers)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 335, in __init__
+    self.wa = WhatsAppDriver(headless=False)  # Visible for first setup
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 66, in __init__
+    self._setup_driver()
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 89, in _setup_driver
+    self.driver = webdriver.Chrome(options=options)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\chromium\webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=self.options)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\webdriver.py", line 25, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 352, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:10 - ProductionUtils - INFO - [log_access:391] - AUDIT: SYSTEM - MESSAGE_COLLECTION - WhatsApp - FAILED
+2026-02-01 21:57:10 - ProductionUtils - WARNING - [wrapper:75] - step1_collect_messages failed (attempt 2/3): Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+. Retrying in 11.2s...
+2026-02-01 21:57:21 - ProductionUtils - DEBUG - [wrapper:60] - Attempt 3/3 for step1_collect_messages
+2026-02-01 21:57:21 - ProductionOrchestrator - INFO - [step1_collect_messages:172] - 
+====================================================================================================
+2026-02-01 21:57:21 - ProductionOrchestrator - INFO - [step1_collect_messages:173] - STEP 1: COLLECTING VENDOR MESSAGES FROM WHATSAPP
+2026-02-01 21:57:21 - ProductionOrchestrator - INFO - [step1_collect_messages:174] - ====================================================================================================
+2026-02-01 21:57:21 - ProductionOrchestrator - INFO - [step1_collect_messages:180] - Monitoring 5 specific vendors ONLY:
+2026-02-01 21:57:21 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   1. ABC Solar Traders (+923001234567)
+2026-02-01 21:57:21 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   2. XYZ Energy Hub (+923219876543)
+2026-02-01 21:57:21 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   3. Solar Solutions (+923335555555)
+2026-02-01 21:57:21 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   4. Green Power Tech (+923457777777)
+2026-02-01 21:57:21 - ProductionOrchestrator - INFO - [step1_collect_messages:182] -   5. Power Systems Pak (+923123333333)
+2026-02-01 21:57:21 - selenium.webdriver.common.selenium_manager - DEBUG - [_get_binary:112] - Selenium Manager binary found at: C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2026-02-01 21:57:21 - selenium.webdriver.common.selenium_manager - DEBUG - [_run:127] - Executing process: C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2026-02-01 21:57:22 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chromedriver not found in PATH
+2026-02-01 21:57:22 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chrome detected at C:\Users\pc\AppData\Local\Google\Chrome\Application\chrome.exe
+2026-02-01 21:57:22 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Detected browser: chrome 144.0.7559.110
+2026-02-01 21:57:22 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Required driver: chromedriver 144.0.7559.109
+2026-02-01 21:57:22 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chromedriver 144.0.7559.109 already in the cache
+2026-02-01 21:57:22 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Driver path: C:\Users\pc\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe
+2026-02-01 21:57:22 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Browser path: C:\Users\pc\AppData\Local\Google\Chrome\Application\chrome.exe
+2026-02-01 21:57:22 - selenium.webdriver.common.service - DEBUG - [_start_process:232] - Started executable: `C:\Users\pc\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe` in a child process with pid: 15736 using 0 to output -3
+2026-02-01 21:57:22 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:59148/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'excludeSwitches': ['enable-automation'], 'useAutomationExtension': False, 'extensions': [], 'binary': 'C:\\Users\\pc\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--user-data-dir=C:\\Users\\pc\\Desktop\\Electro_tech_Whatsapp_Automation\\chrome_profile', '--profile-directory=Default', '--disable-blink-features=AutomationControlled', '--disable-dev-shm-usage', '--no-sandbox']}}}}
+2026-02-01 21:57:22 - urllib3.connectionpool - DEBUG - [_new_conn:241] - Starting new HTTP connection (1): localhost:59148
+2026-02-01 21:57:22 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:59148 "POST /session HTTP/1.1" 500 0
+2026-02-01 21:57:22 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=500 | data={"value":{"error":"session not created","message":"session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff745681be4\n\t0x7ff74567d119\n\t0x7ff7456d4221\n\t0x7ff7456d3a86\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '567', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:57:22 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:57:24 - ProductionOrchestrator - ERROR - [step1_collect_messages:198] - [FAILED] Message collection failed: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+Traceback (most recent call last):
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\run_all.py", line 184, in step1_collect_messages
+    collector = MessageCollector(vendor_numbers)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 335, in __init__
+    self.wa = WhatsAppDriver(headless=False)  # Visible for first setup
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 66, in __init__
+    self._setup_driver()
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 89, in _setup_driver
+    self.driver = webdriver.Chrome(options=options)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\chromium\webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=self.options)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\webdriver.py", line 25, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 352, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:24 - ProductionUtils - INFO - [log_access:391] - AUDIT: SYSTEM - MESSAGE_COLLECTION - WhatsApp - FAILED
+2026-02-01 21:57:24 - ProductionUtils - ERROR - [wrapper:83] - step1_collect_messages failed after 3 attempts: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:24 - ProductionOrchestrator - WARNING - [run:349] - Message collection had errors, but continuing with analysis...
+2026-02-01 21:57:24 - ProductionUtils - DEBUG - [wrapper:60] - Attempt 1/2 for step2_process_data
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step2_process_data:212] - 
+====================================================================================================
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step2_process_data:213] - STEP 2: PROCESSING PRICE DATA EXTRACTION
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step2_process_data:214] - ====================================================================================================
+2026-02-01 21:57:24 - ElectroTech - INFO - [_initialize_db:146] - Database initialized successfully
+2026-02-01 21:57:24 - ElectroTech - INFO - [__init__:447] - Automation Engine initialized
+2026-02-01 21:57:24 - ElectroTech - INFO - [process_whatsapp_messages:451] - Processing WhatsApp messages...
+2026-02-01 21:57:24 - ElectroTech - WARNING - [process_whatsapp_messages:473] - Vendor not found for: 0012
+2026-02-01 21:57:24 - ElectroTech - WARNING - [process_whatsapp_messages:473] - Vendor not found for: 2156
+2026-02-01 21:57:24 - ElectroTech - INFO - [process_whatsapp_messages:498] - Processed 0 price entries
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step2_process_data:220] - [OK] Price processing successful: 0 prices extracted
+2026-02-01 21:57:24 - ProductionUtils - INFO - [log_access:391] - AUDIT: SYSTEM - PRICE_EXTRACTION - Database - SUCCESS
+2026-02-01 21:57:24 - ProductionUtils - DEBUG - [wrapper:60] - Attempt 1/2 for step3_generate_reports
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step3_generate_reports:244] - 
+====================================================================================================
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step3_generate_reports:245] - STEP 3: GENERATING DAILY REPORTS
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step3_generate_reports:246] - ====================================================================================================
+2026-02-01 21:57:24 - ElectroTech - INFO - [_initialize_db:146] - Database initialized successfully
+2026-02-01 21:57:24 - ElectroTech - INFO - [__init__:447] - Automation Engine initialized
+2026-02-01 21:57:24 - ElectroTech - INFO - [generate_daily_report:503] - Generating daily report...
+2026-02-01 21:57:24 - ElectroTech - INFO - [save_reports:434] - Reports saved: C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\output\daily_summary_20260201.txt, C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\output\detailed_report_20260201.txt
+2026-02-01 21:57:24 - ElectroTech - INFO - [generate_daily_report:514] - Daily report generated: 1 products
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step3_generate_reports:264] - [OK] Reports generated successfully:
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step3_generate_reports:265] -   - Summary: C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\output\daily_summary_20260201.txt (148 bytes)
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step3_generate_reports:266] -   - Detailed: C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\output\detailed_report_20260201.txt (803 bytes)
+2026-02-01 21:57:24 - ProductionUtils - INFO - [log_access:391] - AUDIT: SYSTEM - REPORT_GENERATION - FileSystem - SUCCESS
+2026-02-01 21:57:24 - ProductionUtils - DEBUG - [wrapper:60] - Attempt 1/3 for step4_send_to_ceo
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step4_send_to_ceo:293] - 
+====================================================================================================
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step4_send_to_ceo:294] - STEP 4: SENDING DAILY REPORT TO CEO
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step4_send_to_ceo:295] - ====================================================================================================
+2026-02-01 21:57:24 - ProductionOrchestrator - INFO - [step4_send_to_ceo:312] - Attempting to send to CEO: CEO Electro Tech
+2026-02-01 21:57:24 - selenium.webdriver.common.selenium_manager - DEBUG - [_get_binary:112] - Selenium Manager binary found at: C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2026-02-01 21:57:24 - selenium.webdriver.common.selenium_manager - DEBUG - [_run:127] - Executing process: C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2026-02-01 21:57:25 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chromedriver not found in PATH
+2026-02-01 21:57:25 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chrome detected at C:\Users\pc\AppData\Local\Google\Chrome\Application\chrome.exe
+2026-02-01 21:57:25 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Detected browser: chrome 144.0.7559.110
+2026-02-01 21:57:25 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Required driver: chromedriver 144.0.7559.109
+2026-02-01 21:57:25 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chromedriver 144.0.7559.109 already in the cache
+2026-02-01 21:57:25 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Driver path: C:\Users\pc\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe
+2026-02-01 21:57:25 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Browser path: C:\Users\pc\AppData\Local\Google\Chrome\Application\chrome.exe
+2026-02-01 21:57:25 - selenium.webdriver.common.service - DEBUG - [_start_process:232] - Started executable: `C:\Users\pc\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe` in a child process with pid: 4144 using 0 to output -3
+2026-02-01 21:57:25 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:59154/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'excludeSwitches': ['enable-automation'], 'useAutomationExtension': False, 'extensions': [], 'binary': 'C:\\Users\\pc\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--user-data-dir=C:\\Users\\pc\\Desktop\\Electro_tech_Whatsapp_Automation\\chrome_profile', '--profile-directory=Default', '--disable-blink-features=AutomationControlled', '--disable-dev-shm-usage', '--no-sandbox']}}}}
+2026-02-01 21:57:25 - urllib3.connectionpool - DEBUG - [_new_conn:241] - Starting new HTTP connection (1): localhost:59154
+2026-02-01 21:57:26 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:59154 "POST /session HTTP/1.1" 500 0
+2026-02-01 21:57:26 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=500 | data={"value":{"error":"session not created","message":"session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff745681be4\n\t0x7ff74567d119\n\t0x7ff7456d4221\n\t0x7ff7456d3a86\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '567', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:57:26 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:57:28 - ProductionOrchestrator - ERROR - [step4_send_to_ceo:328] - [FAILED] Report sending failed: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+Traceback (most recent call last):
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\run_all.py", line 313, in step4_send_to_ceo
+    sender = ReportSender(WAConfig.CEO_NAME)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 410, in __init__
+    self.wa = WhatsAppDriver(headless=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 66, in __init__
+    self._setup_driver()
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 89, in _setup_driver
+    self.driver = webdriver.Chrome(options=options)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\chromium\webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=self.options)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\webdriver.py", line 25, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 352, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:28 - ProductionUtils - INFO - [log_access:391] - AUDIT: SYSTEM - REPORT_SEND - WhatsApp - FAILED
+2026-02-01 21:57:28 - ProductionUtils - WARNING - [wrapper:75] - step4_send_to_ceo failed (attempt 1/3): Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+. Retrying in 4.9s...
+2026-02-01 21:57:33 - ProductionUtils - DEBUG - [wrapper:60] - Attempt 2/3 for step4_send_to_ceo
+2026-02-01 21:57:33 - ProductionOrchestrator - INFO - [step4_send_to_ceo:293] - 
+====================================================================================================
+2026-02-01 21:57:33 - ProductionOrchestrator - INFO - [step4_send_to_ceo:294] - STEP 4: SENDING DAILY REPORT TO CEO
+2026-02-01 21:57:33 - ProductionOrchestrator - INFO - [step4_send_to_ceo:295] - ====================================================================================================
+2026-02-01 21:57:33 - ProductionOrchestrator - INFO - [step4_send_to_ceo:312] - Attempting to send to CEO: CEO Electro Tech
+2026-02-01 21:57:33 - selenium.webdriver.common.selenium_manager - DEBUG - [_get_binary:112] - Selenium Manager binary found at: C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2026-02-01 21:57:33 - selenium.webdriver.common.selenium_manager - DEBUG - [_run:127] - Executing process: C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2026-02-01 21:57:34 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chromedriver not found in PATH
+2026-02-01 21:57:34 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chrome detected at C:\Users\pc\AppData\Local\Google\Chrome\Application\chrome.exe
+2026-02-01 21:57:34 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Detected browser: chrome 144.0.7559.110
+2026-02-01 21:57:34 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Required driver: chromedriver 144.0.7559.109
+2026-02-01 21:57:34 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chromedriver 144.0.7559.109 already in the cache
+2026-02-01 21:57:34 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Driver path: C:\Users\pc\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe
+2026-02-01 21:57:34 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Browser path: C:\Users\pc\AppData\Local\Google\Chrome\Application\chrome.exe
+2026-02-01 21:57:34 - selenium.webdriver.common.service - DEBUG - [_start_process:232] - Started executable: `C:\Users\pc\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe` in a child process with pid: 5336 using 0 to output -3
+2026-02-01 21:57:34 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:54446/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'excludeSwitches': ['enable-automation'], 'useAutomationExtension': False, 'extensions': [], 'binary': 'C:\\Users\\pc\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--user-data-dir=C:\\Users\\pc\\Desktop\\Electro_tech_Whatsapp_Automation\\chrome_profile', '--profile-directory=Default', '--disable-blink-features=AutomationControlled', '--disable-dev-shm-usage', '--no-sandbox']}}}}
+2026-02-01 21:57:34 - urllib3.connectionpool - DEBUG - [_new_conn:241] - Starting new HTTP connection (1): localhost:54446
+2026-02-01 21:57:34 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:54446 "POST /session HTTP/1.1" 500 0
+2026-02-01 21:57:34 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=500 | data={"value":{"error":"session not created","message":"session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff745681be4\n\t0x7ff74567d119\n\t0x7ff7456d4221\n\t0x7ff7456d3a86\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '567', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:57:34 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:57:36 - ProductionOrchestrator - ERROR - [step4_send_to_ceo:328] - [FAILED] Report sending failed: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+Traceback (most recent call last):
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\run_all.py", line 313, in step4_send_to_ceo
+    sender = ReportSender(WAConfig.CEO_NAME)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 410, in __init__
+    self.wa = WhatsAppDriver(headless=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 66, in __init__
+    self._setup_driver()
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 89, in _setup_driver
+    self.driver = webdriver.Chrome(options=options)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\chromium\webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=self.options)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\webdriver.py", line 25, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 352, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:36 - ProductionUtils - INFO - [log_access:391] - AUDIT: SYSTEM - REPORT_SEND - WhatsApp - FAILED
+2026-02-01 21:57:36 - ProductionUtils - WARNING - [wrapper:75] - step4_send_to_ceo failed (attempt 2/3): Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+. Retrying in 11.8s...
+2026-02-01 21:57:48 - ProductionUtils - DEBUG - [wrapper:60] - Attempt 3/3 for step4_send_to_ceo
+2026-02-01 21:57:48 - ProductionOrchestrator - INFO - [step4_send_to_ceo:293] - 
+====================================================================================================
+2026-02-01 21:57:48 - ProductionOrchestrator - INFO - [step4_send_to_ceo:294] - STEP 4: SENDING DAILY REPORT TO CEO
+2026-02-01 21:57:48 - ProductionOrchestrator - INFO - [step4_send_to_ceo:295] - ====================================================================================================
+2026-02-01 21:57:48 - ProductionOrchestrator - INFO - [step4_send_to_ceo:312] - Attempting to send to CEO: CEO Electro Tech
+2026-02-01 21:57:48 - selenium.webdriver.common.selenium_manager - DEBUG - [_get_binary:112] - Selenium Manager binary found at: C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2026-02-01 21:57:48 - selenium.webdriver.common.selenium_manager - DEBUG - [_run:127] - Executing process: C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2026-02-01 21:57:48 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chromedriver not found in PATH
+2026-02-01 21:57:48 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chrome detected at C:\Users\pc\AppData\Local\Google\Chrome\Application\chrome.exe
+2026-02-01 21:57:48 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Detected browser: chrome 144.0.7559.110
+2026-02-01 21:57:48 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Required driver: chromedriver 144.0.7559.109
+2026-02-01 21:57:48 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - chromedriver 144.0.7559.109 already in the cache
+2026-02-01 21:57:48 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Driver path: C:\Users\pc\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe
+2026-02-01 21:57:48 - selenium.webdriver.common.selenium_manager - DEBUG - [_process_logs:153] - Browser path: C:\Users\pc\AppData\Local\Google\Chrome\Application\chrome.exe
+2026-02-01 21:57:48 - selenium.webdriver.common.service - DEBUG - [_start_process:232] - Started executable: `C:\Users\pc\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe` in a child process with pid: 16072 using 0 to output -3
+2026-02-01 21:57:48 - selenium.webdriver.remote.remote_connection - DEBUG - [execute:405] - POST http://localhost:49630/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'excludeSwitches': ['enable-automation'], 'useAutomationExtension': False, 'extensions': [], 'binary': 'C:\\Users\\pc\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe', 'args': ['--user-data-dir=C:\\Users\\pc\\Desktop\\Electro_tech_Whatsapp_Automation\\chrome_profile', '--profile-directory=Default', '--disable-blink-features=AutomationControlled', '--disable-dev-shm-usage', '--no-sandbox']}}}}
+2026-02-01 21:57:48 - urllib3.connectionpool - DEBUG - [_new_conn:241] - Starting new HTTP connection (1): localhost:49630
+2026-02-01 21:57:49 - urllib3.connectionpool - DEBUG - [_make_request:544] - http://localhost:49630 "POST /session HTTP/1.1" 500 0
+2026-02-01 21:57:49 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:438] - Remote response: status=500 | data={"value":{"error":"session not created","message":"session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.","stacktrace":"Symbols not available. Dumping unresolved backtrace:\n\t0x7ff74589a535\n\t0x7ff74589a590\n\t0x7ff7456410bd\n\t0x7ff745681be4\n\t0x7ff74567d119\n\t0x7ff7456d4221\n\t0x7ff7456d3a86\n\t0x7ff74568cc9c\n\t0x7ff74568dbe3\n\t0x7ff745b77b60\n\t0x7ff745b71f5d\n\t0x7ff745b9311a\n\t0x7ff7458b60a5\n\t0x7ff7458be73c\n\t0x7ff7458a3844\n\t0x7ff7458a39f6\n\t0x7ff745889a07\n\t0x7fff4d5be8d7\n\t0x7fff4f66c53c\n"}} | headers=HTTPHeaderDict({'Content-Length': '567', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-02-01 21:57:49 - selenium.webdriver.remote.remote_connection - DEBUG - [_request:467] - Finished Request
+2026-02-01 21:57:51 - ProductionOrchestrator - ERROR - [step4_send_to_ceo:328] - [FAILED] Report sending failed: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+Traceback (most recent call last):
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\run_all.py", line 313, in step4_send_to_ceo
+    sender = ReportSender(WAConfig.CEO_NAME)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 410, in __init__
+    self.wa = WhatsAppDriver(headless=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 66, in __init__
+    self._setup_driver()
+  File "C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\whatsapp_automation.py", line 89, in _setup_driver
+    self.driver = webdriver.Chrome(options=options)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\chromium\webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=self.options)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\common\webdriver.py", line 25, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 352, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\pc\AppData\Roaming\Python\Python312\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:51 - ProductionUtils - INFO - [log_access:391] - AUDIT: SYSTEM - REPORT_SEND - WhatsApp - FAILED
+2026-02-01 21:57:51 - ProductionUtils - ERROR - [wrapper:83] - step4_send_to_ceo failed after 3 attempts: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:51 - ProductionOrchestrator - WARNING - [run:382] - Failed to send report to CEO: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:51 - ProductionOrchestrator - INFO - [_generate_final_report:412] - 
+====================================================================================================
+2026-02-01 21:57:51 - ProductionOrchestrator - INFO - [_generate_final_report:413] - EXECUTION SUMMARY
+2026-02-01 21:57:51 - ProductionOrchestrator - INFO - [_generate_final_report:414] - ====================================================================================================
+2026-02-01 21:57:51 - ProductionOrchestrator - INFO - [_generate_final_report:415] - Execution ID: 1aeef82b
+2026-02-01 21:57:51 - ProductionOrchestrator - INFO - [_generate_final_report:416] - Status: SUCCESS
+2026-02-01 21:57:51 - ProductionOrchestrator - INFO - [_generate_final_report:417] - Duration: 92.44 seconds
+2026-02-01 21:57:51 - ProductionOrchestrator - INFO - [_generate_final_report:418] - Errors: 6
+2026-02-01 21:57:51 - ProductionOrchestrator - INFO - [_generate_final_report:419] - Warnings: 0
+2026-02-01 21:57:51 - ProductionOrchestrator - INFO - [_generate_final_report:420] - Metrics: {
+  "vendor_count": {
+    "value": 5,
+    "timestamp": "2026-02-01T21:56:18.871834"
+  },
+  "prices_extracted": {
+    "value": 0,
+    "timestamp": "2026-02-01T21:57:24.637546"
+  },
+  "summary_report_size": {
+    "value": 148,
+    "timestamp": "2026-02-01T21:57:24.677958"
+  },
+  "detailed_report_size": {
+    "value": 803,
+    "timestamp": "2026-02-01T21:57:24.677958"
+  }
+}
+2026-02-01 21:57:51 - ProductionOrchestrator - ERROR - [_generate_final_report:423] - ERRORS:
+2026-02-01 21:57:51 - ProductionOrchestrator - ERROR - [_generate_final_report:425] -   - Message collection failed: Message: no such element: Unable to locate element: {"method":"css selector","selector":"canvas"}
+  (Session info: chrome=144.0.7559.110); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff74569c48e
+	0x7ff74569c79c
+	0x7ff7456ed3a7
+	0x7ff7456e9ef5
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:51 - ProductionOrchestrator - ERROR - [_generate_final_report:425] -   - Message collection failed: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:51 - ProductionOrchestrator - ERROR - [_generate_final_report:425] -   - Message collection failed: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:51 - ProductionOrchestrator - ERROR - [_generate_final_report:425] -   - Report sending failed: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:51 - ProductionOrchestrator - ERROR - [_generate_final_report:425] -   - Report sending failed: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:51 - ProductionOrchestrator - ERROR - [_generate_final_report:425] -   - Report sending failed: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff74589a535
+	0x7ff74589a590
+	0x7ff7456410bd
+	0x7ff745681be4
+	0x7ff74567d119
+	0x7ff7456d4221
+	0x7ff7456d3a86
+	0x7ff74568cc9c
+	0x7ff74568dbe3
+	0x7ff745b77b60
+	0x7ff745b71f5d
+	0x7ff745b9311a
+	0x7ff7458b60a5
+	0x7ff7458be73c
+	0x7ff7458a3844
+	0x7ff7458a39f6
+	0x7ff745889a07
+	0x7fff4d5be8d7
+	0x7fff4f66c53c
+
+2026-02-01 21:57:51 - ProductionOrchestrator - INFO - [_generate_final_report:427] - ====================================================================================================
+2026-02-01 21:57:51 - ProductionUtils - INFO - [log_access:391] - AUDIT: SYSTEM - EXECUTION_COMPLETE - DailyOrchestrator - SUCCESS

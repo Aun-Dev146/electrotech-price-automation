@@ -72,3 +72,23 @@
 ================================================================================
 2026-02-01 00:13:13,080 - DailyOrchestrator - INFO - Duration: 42.8 seconds
 2026-02-01 00:13:13,082 - DailyOrchestrator - INFO - ================================================================================
+2026-02-01 21:56:09,693 - ElectroTech - INFO - Running test...
+2026-02-01 21:56:09,704 - ElectroTech - INFO - Database initialized successfully
+2026-02-01 21:56:09,709 - ElectroTech - INFO - Automation Engine initialized
+2026-02-01 21:56:09,709 - ElectroTech - INFO - ============================================================
+2026-02-01 21:56:09,709 - ElectroTech - INFO - STARTING DAILY AUTOMATION
+2026-02-01 21:56:09,711 - ElectroTech - INFO - ============================================================
+2026-02-01 21:56:09,711 - ElectroTech - INFO - Processing WhatsApp messages...
+2026-02-01 21:56:09,771 - ElectroTech - INFO - Inserted price: Inverter Growatt - Rs 65000.0 from VND001
+2026-02-01 21:56:09,783 - ElectroTech - INFO - Inserted price: Inverter Growatt - Rs 65000.0 from VND001
+2026-02-01 21:56:09,792 - ElectroTech - WARNING - Vendor not found for: 0012
+2026-02-01 21:56:09,794 - ElectroTech - INFO - Processed 2 price entries
+2026-02-01 21:56:09,794 - ElectroTech - INFO - [OK] Processed 2 messages
+2026-02-01 21:56:09,794 - ElectroTech - INFO - Generating daily report...
+2026-02-01 21:56:09,801 - ElectroTech - INFO - Reports saved: C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\output\daily_summary_20260201.txt, C:\Users\pc\Desktop\Electro_tech_Whatsapp_Automation\output\detailed_report_20260201.txt
+2026-02-01 21:56:09,804 - ElectroTech - INFO - Daily report generated: 1 products
+2026-02-01 21:56:09,804 - ElectroTech - INFO - [OK] Reports generated
+2026-02-01 21:56:09,806 - ElectroTech - INFO - [OK] Ready to send to CEO
+2026-02-01 21:56:09,806 - ElectroTech - INFO - ============================================================
+2026-02-01 21:56:09,806 - ElectroTech - INFO - [SUCCESS] AUTOMATION COMPLETED SUCCESSFULLY
+2026-02-01 21:56:09,806 - ElectroTech - INFO - ============================================================

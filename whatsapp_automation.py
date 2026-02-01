@@ -4,11 +4,20 @@ WHATSAPP WEB AUTOMATION - PRODUCTION
 Handles message collection and report sending
 
 Uses Selenium for stable, ban-safe automation
+
+IMPORTANT: NO HARDCODED VALUES
+- All configuration loaded from config.ini
+- Vendor numbers loaded from database
+- CEO contact from config.ini [ceo_notification] section
+- Phone numbers and contact details are NEVER hardcoded
+
+See CONFIGURATION_GUIDE.md for setup instructions
 """
 
 import time
 import os
 import logging
+import configparser
 from pathlib import Path
 from datetime import datetime
 from typing import List, Tuple
@@ -29,29 +38,40 @@ except ImportError:
 logger = logging.getLogger("WhatsAppAuto")
 
 # ============================================
-# CONFIGURATION
+# CONFIGURATION - Loaded from config.ini
 # ============================================
 
 class WAConfig:
-    """WhatsApp automation configuration"""
+    """WhatsApp automation configuration - loads from config.ini"""
     
     # Paths
     BASE_DIR = Path(__file__).parent.absolute()
-    CHROME_PROFILE = BASE_DIR / "chrome_profile"
+    CONFIG_FILE = BASE_DIR / "config.ini"
+    
+    # Load configuration from file
+    _config = configparser.ConfigParser()
+    if CONFIG_FILE.exists():
+        _config.read(CONFIG_FILE)
+        logger.info(f"Configuration loaded from {CONFIG_FILE}")
+    else:
+        logger.warning(f"Configuration file not found: {CONFIG_FILE}")
+    
+    # Paths from config or defaults
+    CHROME_PROFILE = Path(_config.get('whatsapp', 'chrome_profile_path', fallback='./chrome_profile'))
     OUTPUT_DIR = BASE_DIR / "data" / "whatsapp_messages"
     
     # WhatsApp Web
     WA_WEB_URL = "https://web.whatsapp.com"
     
-    # Timing (in seconds) - Production safe values
-    HUMAN_DELAY_MIN = 2
-    HUMAN_DELAY_MAX = 5
-    PAGE_LOAD_TIMEOUT = 60
-    ELEMENT_TIMEOUT = 30
+    # Timing (in seconds) - from config.ini
+    HUMAN_DELAY_MIN = float(_config.get('whatsapp', 'human_delay_min', fallback='2'))
+    HUMAN_DELAY_MAX = float(_config.get('whatsapp', 'human_delay_max', fallback='5'))
+    PAGE_LOAD_TIMEOUT = int(_config.get('whatsapp', 'page_load_timeout', fallback='60'))
+    ELEMENT_TIMEOUT = int(_config.get('whatsapp', 'message_timeout', fallback='30'))
     
-    # CEO contact
-    CEO_NAME = "CEO Electro Tech"  # WhatsApp contact name
-    CEO_PHONE = "+92 300 1234567"  # Fallback
+    # CEO contact - from config.ini, NOT hardcoded
+    CEO_NAME = _config.get('ceo_notification', 'ceo_contact_name', fallback='CEO')
+    CEO_PHONE = _config.get('ceo_notification', 'ceo_phone_number', fallback='')
 
 # ============================================
 # WHATSAPP WEB DRIVER
@@ -472,10 +492,12 @@ def main():
     elif args.collect:
         print("=== COLLECTING VENDOR MESSAGES ===")
         
-        # Load vendor numbers (in production, load from database)
-        vendor_numbers = ["+923001234567", "+923219876543"]
-        
-        collector = MessageCollector(vendor_numbers)
+        # In production: vendors are loaded from database via run_all.py
+        # DO NOT hardcode vendor numbers here
+        print("ERROR: Vendor numbers must be loaded from database configuration")
+        print("Use: python run_all.py")
+        print("This properly loads vendors from database with status='active'")
+        return
         count = collector.collect_daily_messages()
         
         print(f"\n✓ Collected {count} messages")
@@ -486,7 +508,14 @@ def main():
     elif args.send:
         print("=== SENDING TEST MESSAGE ===")
         
-        sender = ReportSender(WAConfig.CEO_NAME)
+        # Use CEO contact from config.ini, NOT hardcoded
+        ceo_name = WAConfig.CEO_NAME
+        if not ceo_name or ceo_name == 'CEO':
+            print("ERROR: CEO contact name not configured in config.ini")
+            print("Configure [ceo_notification] ceo_contact_name in config.ini")
+            return
+        
+        sender = ReportSender(ceo_name)
         success = sender.send_daily_report(args.send)
         
         if success:
