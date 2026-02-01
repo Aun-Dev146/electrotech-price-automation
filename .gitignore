@@ -1,0 +1,71 @@
+# Electro Tech WhatsApp Automation - Git Ignore
+
+# ================================
+# SENSITIVE DATA - NEVER COMMIT
+# ================================
+
+# Configuration with credentials
+config.ini
+
+# Google API credentials
+*.json
+credentials.json
+token.json
+client_secret*.json
+service_account*.json
+
+# ================================
+# RUNTIME DATA
+# ================================
+
+# WhatsApp session (contains auth tokens)
+chrome_profile/
+
+# Database (contains vendor data)
+data/electro_tech.db
+data/electro_tech.db-journal
+data/electro_tech.db-wal
+
+# Collected messages (may contain sensitive info)
+data/whatsapp_messages/
+
+# Logs and outputs
+logs/
+output/
+backups/
+
+# ================================
+# PYTHON
+# ================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+*.egg-info/
+*.egg
+.venv/
+venv/
+ENV/
+
+# ================================
+# IDE / EDITORS
+# ================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ================================
+# SYSTEM
+# ================================
+*.log
+*.tmp
+*.temp
