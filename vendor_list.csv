@@ -1,0 +1,7 @@
+vendor_id,vendor_name,mobile,whatsapp_number,email,address,vendor_type,products,status,created_at
+VND001,ABC Solar Traders,0300-1234567,+923001234567,abc@email.com,Lahore,Importer,,active,2026-01-31 19:07:39
+VND002,XYZ Energy Hub,0321-9876543,+923219876543,xyz@email.com,Karachi,Trader,,active,2026-01-31 19:07:39
+VND003,Solar Solutions,0333-5555555,+923335555555,solar@email.com,Islamabad,Importer,,active,2026-01-31 19:07:39
+VND004,Green Power Tech,0345-7777777,+923457777777,green@email.com,Faisalabad,Trader,,active,2026-01-31 19:07:39
+VND005,Power Systems Pak,0312-3333333,+923123333333,power@email.com,Multan,Importer,,active,2026-01-31 19:07:39
+VND006,Aun Traders,0313-4883408,+923134883408,aun@traders.pk,"Lahore, Pakistan",Trader,"Solar Panels, Inverters, Batteries",active,2026-02-01 18:18:18

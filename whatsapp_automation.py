@@ -87,29 +87,152 @@ class WhatsAppDriver:
     
     def _setup_driver(self):
         """Initialize Chrome with WhatsApp-safe options"""
-        options = Options()
+        import subprocess
+        import tempfile
+        import shutil
         
-        # Use persistent profile to keep logged in
-        options.add_argument(f"--user-data-dir={WAConfig.CHROME_PROFILE}")
-        options.add_argument("--profile-directory=Default")
+        # === AGGRESSIVE PROCESS CLEANUP ===
+        def cleanup_chrome_processes():
+            """Forcefully kill all Chrome processes"""
+            try:
+                os.system("taskkill /F /IM chrome.exe 2>nul || true")
+                os.system("taskkill /F /IM chromedriver.exe 2>nul || true")
+                os.system("taskkill /F /IM chrome.exe 2>nul || true")
+                time.sleep(2)
+            except:
+                pass
         
-        # Stealth settings
-        options.add_argument("--disable-blink-features=AutomationControlled")
-        options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        options.add_experimental_option('useAutomationExtension', False)
+        def cleanup_profile_locks():
+            """Remove lock files and corrupted state from Chrome profile"""
+            try:
+                profile_path = WAConfig.CHROME_PROFILE
+                if profile_path.exists():
+                    # Remove lock files
+                    lock_files = [
+                        "Singleton", "SingletonLock", "SingletonSocket",
+                        ".lock", ".tmp", "DevToolsActivePort"
+                    ]
+                    for pattern in lock_files:
+                        for item in profile_path.rglob(f"*{pattern}*"):
+                            try:
+                                if item.is_file():
+                                    item.unlink(missing_ok=True)
+                            except:
+                                pass
+                    
+                    # Remove Chrome cache directory which can cause issues
+                    cache_dir = profile_path / "Cache"
+                    if cache_dir.exists():
+                        try:
+                            shutil.rmtree(cache_dir, ignore_errors=True)
+                            logger.info("Cleared Chrome cache directory")
+                        except:
+                            pass
+                    
+                    logger.info("Cleaned up Chrome profile locks")
+            except Exception as e:
+                logger.warning(f"Could not clean profile locks: {e}")
         
-        # Performance
-        options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--no-sandbox")
-        
-        if self.headless:
-            options.add_argument("--headless")
-        
-        # Start driver
-        self.driver = webdriver.Chrome(options=options)
-        self.driver.maximize_window()
-        
-        logger.info("Chrome driver initialized")
+        max_retries = 3
+        for attempt in range(1, max_retries + 1):
+            try:
+                # CLEANUP BEFORE EACH ATTEMPT
+                cleanup_chrome_processes()
+                cleanup_profile_locks()
+                time.sleep(2)
+                
+                options = Options()
+                
+                # STRATEGY: Use TEMPORARY profile for first attempts, then persistent
+                # This avoids lock file issues
+                if attempt < 3:
+                    # First 2 attempts: use fresh temp directory
+                    profile_path = Path(tempfile.gettempdir()) / f"chrome_whatsapp_temp_{int(time.time())}"
+                    profile_path.mkdir(parents=True, exist_ok=True)
+                    logger.info(f"Using temporary profile: {profile_path}")
+                else:
+                    # Last attempt: use persistent profile if temp failed
+                    profile_path = WAConfig.CHROME_PROFILE
+                    profile_path.mkdir(parents=True, exist_ok=True)
+                    logger.info(f"Using persistent profile: {profile_path}")
+                
+                options.add_argument(f"--user-data-dir={profile_path}")
+                options.add_argument("--profile-directory=Default")
+                
+                # Stealth settings
+                options.add_argument("--disable-blink-features=AutomationControlled")
+                options.add_experimental_option("excludeSwitches", ["enable-automation"])
+                options.add_experimental_option('useAutomationExtension', False)
+                
+                # === ENHANCED STABILITY OPTIONS ===
+                # Memory and process management
+                options.add_argument("--disable-dev-shm-usage")
+                options.add_argument("--no-sandbox")
+                options.add_argument("--disable-gpu")
+                options.add_argument("--disable-extensions")
+                options.add_argument("--disable-plugins")
+                options.add_argument("--disable-sse3")
+                options.add_argument("--disable-sync")
+                
+                # Disable problematic features that cause crashes
+                options.add_argument("--disable-breakpad")
+                options.add_argument("--disable-client-side-phishing-detection")
+                options.add_argument("--disable-component-extensions-with-background-pages")
+                options.add_argument("--disable-default-apps")
+                options.add_argument("--disable-preconnect")
+                options.add_argument("--disable-prerender")
+                
+                # Performance options
+                options.add_argument("--metrics-recording-only")
+                options.add_argument("--mute-audio")
+                options.add_argument("--no-first-run")
+                options.add_argument("--no-default-browser-check")
+                
+                # Port management: let OS choose available port
+                options.add_argument("--remote-debugging-port=0")
+                
+                # Disable notifications and popups
+                prefs = {
+                    "profile.default_content_setting_values.notifications": 2,
+                    "profile.default_content_settings.popups": 0,
+                    "profile.managed_default_content_settings.images": 2,  # Disable images to save memory
+                }
+                options.add_experimental_option("prefs", prefs)
+                
+                if self.headless:
+                    options.add_argument("--headless")
+                
+                # INITIALIZE DRIVER
+                logger.info(f"Initializing Chrome driver (attempt {attempt}/3)...")
+                self.driver = webdriver.Chrome(options=options)
+                self.driver.maximize_window()
+                self.driver.set_page_load_timeout(WAConfig.PAGE_LOAD_TIMEOUT)
+                
+                logger.info(f"✓ Chrome driver initialized successfully (attempt {attempt}/3)")
+                return
+            
+            except Exception as e:
+                error_msg = str(e)
+                logger.warning(f"✗ Chrome initialization attempt {attempt}/3 failed: {error_msg[:100]}")
+                
+                # Clean up failed driver
+                if self.driver:
+                    try:
+                        self.driver.quit()
+                    except:
+                        pass
+                    self.driver = None
+                
+                # CLEANUP AFTER FAILED ATTEMPT
+                cleanup_chrome_processes()
+                
+                if attempt < max_retries:
+                    wait_time = 5 * attempt
+                    logger.info(f"[RETRY] Waiting {wait_time} seconds before next attempt...")
+                    time.sleep(wait_time)
+                else:
+                    logger.error("✗ Chrome driver initialization failed after all retries")
+                    raise RuntimeError(f"Failed to initialize Chrome driver after {max_retries} attempts: {error_msg}")
     
     def _human_delay(self, min_sec=None, max_sec=None):
         """Random delay to mimic human behavior"""
@@ -324,9 +447,24 @@ class WhatsAppDriver:
     
     def close(self):
         """Close browser"""
-        if self.driver:
-            self.driver.quit()
-            logger.info("Browser closed")
+        try:
+            if self.driver:
+                self.driver.quit()
+                self.driver = None
+                logger.info("Browser closed successfully")
+        except Exception as e:
+            logger.warning(f"Error closing browser: {e}")
+        finally:
+            # Force cleanup of Chrome processes
+            try:
+                os.system("taskkill /F /IM chrome.exe 2>nul || true")
+                os.system("taskkill /F /IM chromedriver.exe 2>nul || true")
+            except:
+                pass
+    
+    def __del__(self):
+        """Ensure cleanup on object deletion"""
+        self.close()
 
 # ============================================
 # MESSAGE COLLECTOR
@@ -416,7 +554,16 @@ class MessageCollector:
     
     def close(self):
         """Close WhatsApp session"""
-        self.wa.close()
+        try:
+            if hasattr(self, 'wa'):
+                self.wa.close()
+            logger.info("MessageCollector closed")
+        except Exception as e:
+            logger.warning(f"Error closing MessageCollector: {e}")
+    
+    def __del__(self):
+        """Ensure cleanup on object deletion"""
+        self.close()
 
 # ============================================
 # REPORT SENDER
@@ -454,7 +601,16 @@ class ReportSender:
     
     def close(self):
         """Close WhatsApp session"""
-        self.wa.close()
+        try:
+            if hasattr(self, 'wa'):
+                self.wa.close()
+            logger.info("ReportSender closed")
+        except Exception as e:
+            logger.warning(f"Error closing ReportSender: {e}")
+    
+    def __del__(self):
+        """Ensure cleanup on object deletion"""
+        self.close()
 
 # ============================================
 # CLI INTERFACE

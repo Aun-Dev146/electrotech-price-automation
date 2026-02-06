@@ -224,6 +224,31 @@ python setup_utils.py --list-active
 # Should show all your active vendors
 ```
 
+#### D. Share Vendor List with CEO 📊
+```bash
+# Option 1: Export to Excel (Recommended)
+python google_sheets_export.py --excel
+# Creates vendor_list.xlsx - Share with CEO
+
+# Option 2: Export to Google Sheets (Real-time)
+python google_sheets_export.py --setup-google
+# Follow instructions to create Google Sheet
+# Then export: python google_sheets_export.py --google <SHEET_ID>
+
+# Option 3: Export to CSV
+python google_sheets_export.py --csv
+# Creates vendor_list.csv - Universal format
+
+# List vendors in database
+python google_sheets_export.py --list
+```
+
+**What CEO Gets:**
+- Vendor ID, Name, Mobile, WhatsApp Number
+- Email, Address, Type, Products
+- Status, Added Date
+- Easy to view, edit, and track
+
 ### Step 6: Setup WhatsApp Web (5 min) - CRITICAL
 
 ```bash

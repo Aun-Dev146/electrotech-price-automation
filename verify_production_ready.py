@@ -12,20 +12,20 @@ from datetime import datetime
 def check_file_exists(filepath, description):
     """Check if required file exists"""
     if Path(filepath).exists():
-        print(f"✓ {description}")
+        print(f"[OK] {description}")
         return True
     else:
-        print(f"✗ {description} - FILE NOT FOUND: {filepath}")
+        print(f"[FAIL] {description} - FILE NOT FOUND: {filepath}")
         return False
 
 def check_python_version():
     """Check Python version"""
     version = sys.version_info
     if version.major >= 3 and version.minor >= 9:
-        print(f"✓ Python version OK: {version.major}.{version.minor}")
+        print(f"[OK] Python version OK: {version.major}.{version.minor}")
         return True
     else:
-        print(f"✗ Python version too old: {version.major}.{version.minor} (need 3.9+)")
+        print(f"[FAIL] Python version too old: {version.major}.{version.minor} (need 3.9+)")
         return False
 
 def check_packages():
@@ -39,9 +39,9 @@ def check_packages():
     for package in packages:
         try:
             __import__(package)
-            print(f"✓ Package installed: {package}")
+            print(f"[OK] Package installed: {package}")
         except ImportError:
-            print(f"✗ Package missing: {package}")
+            print(f"[FAIL] Package missing: {package}")
             all_ok = False
     
     return all_ok
@@ -50,7 +50,7 @@ def check_database():
     """Check if database is initialized"""
     db_path = Path("data/electro_tech.db")
     if not db_path.exists():
-        print(f"✗ Database not initialized: {db_path}")
+        print(f"[FAIL] Database not initialized: {db_path}")
         return False
     
     try:
@@ -62,32 +62,32 @@ def check_database():
         for table in tables:
             cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='{table}'")
             if cursor.fetchone():
-                print(f"✓ Database table exists: {table}")
+                print(f"[OK] Database table exists: {table}")
             else:
-                print(f"✗ Database table missing: {table}")
+                print(f"[FAIL] Database table missing: {table}")
                 return False
         
         # Check for active vendors
         cursor.execute("SELECT COUNT(*) FROM vendors WHERE status='active'")
         vendor_count = cursor.fetchone()[0]
         if vendor_count > 0:
-            print(f"✓ Active vendors in database: {vendor_count}")
+            print(f"[OK] Active vendors in database: {vendor_count}")
         else:
-            print(f"✗ No active vendors in database (add with: python setup_utils.py --add-vendor)")
+            print(f"[FAIL] No active vendors in database (add with: python setup_utils.py --add-vendor)")
             return False
         
         conn.close()
         return True
     
     except Exception as e:
-        print(f"✗ Database check failed: {e}")
+        print(f"[FAIL] Database check failed: {e}")
         return False
 
 def check_configuration():
     """Check if configuration file exists and is valid"""
     config_path = Path("config.ini")
     if not config_path.exists():
-        print(f"✗ Configuration file not found: {config_path}")
+        print(f"[FAIL] Configuration file not found: {config_path}")
         return False
     
     try:
@@ -100,15 +100,15 @@ def check_configuration():
         required_sections = ['whatsapp', 'ceo_notification', 'vendors']
         for section in required_sections:
             if config.has_section(section):
-                print(f"✓ Configuration section exists: [{section}]")
+                print(f"[OK] Configuration section exists: [{section}]")
             else:
-                print(f"✗ Configuration section missing: [{section}]")
+                print(f"[FAIL] Configuration section missing: [{section}]")
                 return False
         
         return True
     
     except Exception as e:
-        print(f"✗ Configuration check failed: {e}")
+        print(f"[FAIL] Configuration check failed: {e}")
         return False
 
 def check_directories():
@@ -126,10 +126,10 @@ def check_directories():
     for directory in directories:
         path = Path(directory)
         if path.exists():
-            print(f"✓ Directory exists: {directory}")
+            print(f"[OK] Directory exists: {directory}")
         else:
             path.mkdir(parents=True, exist_ok=True)
-            print(f"✓ Directory created: {directory}")
+            print(f"[OK] Directory created: {directory}")
     
     return all_ok
 
@@ -137,10 +137,10 @@ def check_whatsapp_session():
     """Check if WhatsApp session is saved"""
     profile_path = Path("chrome_profile/Default")
     if profile_path.exists():
-        print(f"✓ WhatsApp session found (ready for use)")
+        print(f"[OK] WhatsApp session found (ready for use)")
         return True
     else:
-        print(f"⚠ WhatsApp session not found (run: python whatsapp_automation.py --setup)")
+        print(f"[WARN] WhatsApp session not found (run: python whatsapp_automation.py --setup)")
         return False
 
 def main():
@@ -169,7 +169,7 @@ def main():
     print("="*80)
     
     for check_name, result in results.items():
-        status = "✓ PASS" if result else "✗ FAIL"
+        status = "[OK] PASS" if result else "[FAIL] FAIL"
         print(f"{status}: {check_name}")
     
     # Overall status
@@ -177,7 +177,7 @@ def main():
     
     print("\n" + "="*80)
     if all_ok:
-        print("✓ SYSTEM IS PRODUCTION-READY FOR CEO DEPLOYMENT")
+        print("[OK] SYSTEM IS PRODUCTION-READY FOR CEO DEPLOYMENT")
         print("="*80)
         print("\nNext steps:")
         print("1. Run test: python run_all.py")
@@ -186,7 +186,7 @@ def main():
         print("4. Deploy to scheduler (Task Scheduler or Cron)")
         return 0
     else:
-        print("✗ SYSTEM NOT READY - ISSUES FOUND")
+        print("[FAIL] SYSTEM NOT READY - ISSUES FOUND")
         print("="*80)
         print("\nFix issues above, then run this script again")
         return 1
